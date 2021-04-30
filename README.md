@@ -6,9 +6,13 @@ Kendimizi ve memleketimizi anlatan bir web sitesi geliştirmek.
 PROJEDE KULLANILACAK TEKNOLOJİLER
 
 HTML
+
 CSS
+
 JAVASCRIPT
+
 PHP
+
 BOOTSTRAP
 
 PROJE DETAYI
