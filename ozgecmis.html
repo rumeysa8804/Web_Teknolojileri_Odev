@@ -4,7 +4,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <style type="text/css" lang="scss">
     body{
-      background-color: 33CCCC;
+      background-color:  rgb(192,192,192);
     }
     .navbar{
       max-height: 50px;
@@ -23,11 +23,39 @@
       top: 20px;
       padding-top: 0;
     }
+    #genelbilgi{
+      float: left;
+      width: 300px;
+      height: 300px;
+    }
+    #genelbilgi > p{
+      font-size: 15px;
+      margin-left: 5px;
+    }
+    #profilresmi{
+      width: 90px;
+      height: 130px;
+    }
+    #ozgecmis{
+      position: relative;
+      left: 350px;
+      border: 1px solid rgb(150,150,150);
+      width: 550px;
+      height: 800px;
+      background-color: white;
+      margin: 20px;
+      padding: 20px;
+    }
+    #egitimbilgileri > h5{
+      position: relative;
+      top: 250px;
+      right: 390px;
+    }
   </style>
 </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid" style="background-color: 66CCCC;">
+  <div class="container-fluid" style="background-color: rgb(150,150,150);">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
@@ -55,5 +83,59 @@
     </div>
   </div>
 </nav>
+<div id="ozgecmis">
+  <div id="genelbilgi">
+    <p><h5>Kişisel Bilgiler</h5></p>
+    <p><b>İsim:</b> Rumeysa</p>
+    <p><b>Soyisim:</b> Bayrak</p>
+    <p><b>Doğum Tarihi:</b> 22/11/2002</p>
+    <p><b>E-mail:</b> <a href="mailto:rbayrak677@gmail.com">rbayrak677@gmail.com</a></p>
+  </div>
+  <div style="float: left;">
+    <img src="https://i0.wp.com/www.bursasporluyuz.org/wp-content/uploads/avatars/bursasporluyuz-guest.jpg?ssl=1"  id="profilresmi">
+  </div>
+  <div id="egitimbilgileri">
+  <h5>Eğitim</h5>
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Okul İsmi</th>
+      <th scope="col">Başlangıç</th>
+      <th scope="col">Mezuniyet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ülkü Köyü İ.Ö.O</td>
+      <td>2008</td>
+      <td>2016</td>
+    </tr>
+    <tr>
+      <td>Sami Evkuran A.L</td>
+      <td>2016</td>
+      <td>2020</td>
+    </tr>
+    <tr>
+      <td>Sakarya Üniversitesi</td>
+      <td>2020</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div>
+  <h5>Programlama Bilgisi</h5>
+  <ul>
+    <li>C++</li>
+    <li>C#</li>
+    <li>C</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Javascript</li>
+    <li>Mysql</li>
+    <li>PHP</li>
+  </ul>
+</div>
+</div>
   </body>
 </html>
