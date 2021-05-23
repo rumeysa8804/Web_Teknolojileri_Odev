@@ -1,10 +1,11 @@
 <DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <style type="text/css" lang="scss">
     body{
-      background-color: 33CCCC;
+      background-color: rgb(192,192,192);
     }
     .navbar{
       max-height: 50px;
@@ -12,26 +13,97 @@
     .nav-item{
       margin: 15px;
     }
-    .form-control{
-      max-height: 30px;
-      position:relative;
-      top: 20px;
+    
+    #sehirbilgi{
+      float: left;
+      margin: 20px;
+      height: 600px;
+      width: 700px;
     }
-    .btn{
-      max-height: 30px;
-      position:relative;
-      top: 20px;
-      padding-top: 0;
+    #icerik{
+      float: left;
+      margin-left: 100px;
+      width: 300px;
+      height: 530px;
+      border: 1px solid black;
+      background-color: #cccccc;
     }
+    #icerik>img{
+      margin-left: 30px;
+      margin-top: 20px;
+      border: 1px solid black;
+      width: 250px;
+    }
+    #icerik>p{
+      margin-left:40px;
+    }
+    .slider{
+      position: relative;
+      width: 500px;
+      height: 300px;
+      right: 700px;
+      top: 40px;
+      overflow: hidden;
+      margin-bottom: 100px;
+    }
+    .slider-content{
+      position: absolute;
+      width: 500%;
+      left: 0;
+      animation: slide 20s infinite;
+    }
+    .slider-content:hover{
+      animation-play-state: paused;
+    }
+    .slider-item{
+      width: 20%;
+      float: left;
+    }
+    .slider-item>a>img{
+      width: 500px;
+      height: 300px;
+    }
+    @keyframes slide {
+      0% {
+        transform: translateX(0px);
+      }
+      10% {
+        transform: translateX(-500px);
+      }
+      20% {
+        transform: translateX(-500px);
+      }
+      30% {
+        transform: translateX(-1000px);
+      }
+      40% {
+        transform: translateX(-1000px);
+      }
+      50% {
+        transform: translateX(-1500px);
+      }
+      60% {
+        transform: translateX(-1500px);
+      }
+      70% {
+        transform: translateX(-2000px);
+      }
+      80% {
+        transform: translateX(-2000px);
+      }
+      90% {
+        transform: translateX(0px);
+      } 
+      }   
   </style>
 </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid" style="background-color: 66CCCC;">
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid" style="background-color:rgb(150,150,150);">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="hakkımda.html" target="_self" style="color: white; size: 16px;">Hakkımda</a>
+          <a class="nav-link" href="index.html" target="_self" style="color: white; size: 16px;">Hakkımda</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="ozgecmis.html" target="_self" style="color: white; size: 16px;">Özgeçmiş</a>
@@ -46,14 +118,70 @@
           <a class="nav-link" href="ilgialanlari.html" target="_self" style="color: white; size: 16px;">İlgi Alanlarım</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="login.html" target="_self" style="color: white; size: 16px;">Login</a>
+          <a class="nav-link" href="login.html" target="_self" style="color: white; size: 16px;">Giriş</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="iletisim.html" target="_self" style="color: white; size: 16px;">İletişim</a>
+          <a class="nav-link" href="iletisim.html" target="_self" style="color: white; size: 16px;">İletisim</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
+ <h3 style="margin: 20px;">BURSA</h3>
+ <div>
+ <div id="sehirbilgi">
+   <p>Bursa, Turkiye'nin bir ili ve en kalabalik dorduncu sehri. 2020 itibariyla 3.101.833 nufusa sahiptir. 2016 Dunya Yasanabilir Sehirler siralamasinda Dunya'da 28. Turkiye'de 1. sirada yer almaktadir. Marmara Bölgesinin Guney Marmara bolumunde, 40° bati boylam ve 29° kuzey enlem daireleri arasinda yer alir. Eski adi Hudavendigâr'dır. Kuzeyinde Marmara Denizi ve Yalova, kuzeydoguda Kocaeli ve Sakarya, doguda Bilecik, guneyde Kutahya ve batida Balikesir illeri ile cevrilidir.<br><br>
+
+Ekonomik acıdan Turkiye'nin en gelismis kentlerinden biri olan Bursa dogal ve tarihsel zenginlikleriyle de onem tasır. Bursa'da en cok Osmanli Imparatorlugu'nun kurulus donemine ait tarihî eserlerin bulunmasinin sebebi ise, Bursa'nin Osmanli Devleti'nin ilk baskenti olmasidir. Bursa alısveris merkezleri, parkları, muzeleri ve carsisiyla bolgede one cıkar. Ayrica Bursa Marmara bölgesinin Istanbul'dan sonra gelen ikinci buyuk sehridir. Turkiye'nin en onemli birkac sanayi kentinden biridir. Şehir Istanbul'dan sonra en buyuk ikinci ihracati gerceklestirmektedir. Sehrin futbol takimi Bursaspor 2009-10 sezonunda Super Lig sampiyonudur.<br><br>
+
+Bursa, sanayi istatistiklerine gore Turkiye'nin en buyuk sanayi kenti ve otomotiv uretim merkezidir. CNN International tarafindan Turkiye'nin Detroit'i yakistirmasi yapilmistir. Tofas-Fiat, Renault, Bosch, Peugeot, Karsan Otomotiv, binek otomobil ve ticari araclar ile Cobra Guleryuz otobus fabrikaları Bursa'da bulunmaktadır. Bursa'nın otomotiv sanayinin Turkiye'de merkezi olmasından dolayı kurulan Bursa Otomobil Muzesi yine bu sehirde bulunmaktadır<br>.</p>
+ </div>
+
+ <div id="icerik">
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHVIvp9StXbozX1HCSReVkNVtCOJ6jNVhNv-L9fmVlfdDZ4GiONG-0KThAUewyaGqdgBk&usqp=CAU">
+   <hr>
+   <p><b>Ülke:</b> Türkiye</p>
+   <p><b>Bölge:</b> Marmara Bölgesi</p>
+   <hr>
+   <p><b>Yüz Ölçümü: </b> 10,882 km² (4.201 mil²)</p>
+   <hr>
+   <p><b>Rakım: </b>155 m (508 ft)</p>
+   <hr>
+   <p><b>Nüfus: </b>3.101.833</p>
+   <hr>
+   <p><b>Alan Kodu : </b>(+90) 224</p>
+   <p><b>Plaka Kodu : </b>16</p>
+ </div>
+ </div>
+  <div class="slider">
+    <div class="slider-content">
+    <div class="slider-item">
+     <a href="https://tr.wikipedia.org/wiki/Bursa_Ulu_Camii"> 
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB7peOxwQLewktZ3XV91BVJrU5St4-1J62zbWAh8JqFIgY7n6azhbRyjG7EIOsvzRAFdg&usqp=CAU">
+     </a>
+    </div>
+    <div class="slider-item">
+      <a href="http://www.tofasanadoluarabalarimuzesi.com/">
+      <img src="https://www.kulturportali.gov.tr/repoKulturPortali/large/18032013/7843e99c-bc34-447f-94c0-5a13a897edc4.png?format=jpg&quality=50">
+      </a>
+    </div>
+    <div class="slider-item">
+      <a href="https://bursa.ktb.gov.tr/TR-94260/bursa-arkeoloji-muzesi.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHLpY4wxG26LwoFE8FD99-SUSksmf9yNY1fZ9y5RZuNeleQWsGBDvwnxljJ1UKr98GfEQ&usqp=CAU">
+      </a>
+    </div>
+    <div class="slider-item">
+      <a href="https://www.kulturportali.gov.tr/turkiye/bursa/gezilecekyer/ataturk-evi-muzesi">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaH83yFcW7hck_KUdjQdKHzxuFbuLE4_A23whIbxeixjSisqKaf7MXiM8KCM1Tf57jhh0&usqp=CAU">
+      </a>
+    </div>
+    <div class="slider-item">
+      <a href="https://bursa.ktb.gov.tr/TR-94265/mudanya-mutareke-evi-muzesi.html">
+      <img src="https://avatars.mds.yandex.net/get-altay/753950/2a00000165d67b530b6dc9835c37734041f7/XXL">
+      </a>
+    </div>
+  </div>
+</div>
   </body>
 </html>

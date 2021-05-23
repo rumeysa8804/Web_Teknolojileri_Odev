@@ -1,10 +1,11 @@
 <DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  <style type="text/css" lang="scss">
-    body{
-      background-color: 33CCCC;
+  <style type="text/css">
+      body{
+      background-color: rgb(192,192,192); 
     }
     .navbar{
       max-height: 50px;
@@ -13,25 +14,37 @@
       margin: 15px;
     }
     .form-control{
-      max-height: 30px;
-      position:relative;
-      top: 20px;
+      width: 400px;
+      height: 30px;
     }
-    .btn{
-      max-height: 30px;
-      position:relative;
-      top: 20px;
-      padding-top: 0;
+    #mesaj{
+      width: 400px;
+      height: 200px;
     }
   </style>
+  <script type="text/javascript">
+    
+    function kontrol() {
+      var a = document.forms["form"]["isim"].value;
+      var b = document.forms["form"]["soyisim"].value;
+      var c = document.forms["form"]["email1"].value;
+      var d = document.forms["form"]["mesaj"].value;
+      if (a == null || a == "", b == null || b == "", c == null || c == "", d == null || d == "") {
+        alert("Tüm alanlar dolu olmalıdır!");
+        return false;
+      }
+      return true;
+    
+}
+  </script>
 </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid" style="background-color: 66CCCC;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid" style="background-color:rgb(150,150,150);">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="hakkımda.html" target="_self" style="color: white; size: 16px;">Hakkımda</a>
+          <a class="nav-link" href="index.html" target="_self" style="color: white; size: 16px;">Hakkımda</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="ozgecmis.html" target="_self" style="color: white; size: 16px;">Özgeçmiş</a>
@@ -46,14 +59,41 @@
           <a class="nav-link" href="ilgialanlari.html" target="_self" style="color: white; size: 16px;">İlgi Alanlarım</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="login.html" target="_self" style="color: white; size: 16px;">Login</a>
+          <a class="nav-link" href="login.html" target="_self" style="color: white; size: 16px;">Giriş</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="iletisim.html" target="_self" style="color: white; size: 16px;">İletişim</a>
+          <a class="nav-link" href="iletisim.html" target="_self" style="color: white; size: 16px;">İletisim</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+<br>
+<div style="position:relative;left: 430px; max-width: 480px;">
+<form style="border:1px solid #cccccc;padding: 35px; background-color: #cccccc;" name="form" action="iletisim.php" method="POST" onsubmit="return kontrol()">
+  <h3>İletişim Formu</h3>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">İsim : </label>
+    <input type="text" class="form-control" id="isim" name="isim" placeholder="isminizi giriniz">
+    <label for="exampleInputEmail1" class="form-label">Soyisim : </label>
+    <input type="text" class="form-control" id="soyisim" name="soyisim" placeholder="Soyisminizi giriniz">
+    <label for="exampleInputEmail1" class="form-label">E-mail :</label>
+    <input type="email" class="form-control" id="email1" name="email1" aria-describedby="emailHelp" placeholder="person@gmail.com">
+  </div>
+  <div class="mb-3 form-check">
+    <label for="exampleInputEmail1" class="form-label">Cinsiyet : </label><br>
+    <input type="checkbox" class="form-check-input" id="kadin" name="check">
+    <label class="form-check-label" for="exampleCheck1" >Kadın</label><br>
+    <input type="checkbox" class="form-check-input" id="erkek" name="check">
+    <label class="form-check-label" for="exampleCheck2">Erkek</label>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Mesaj : </label>
+    <input type="text" class="form-control" id="mesaj" name="mesaj" placeholder="Mesajı giriniz...">
+  </div>
+  <button type="submit" name="iletisim" class="btn btn-primary">Gönder</button>
+  <button type="reset" class="btn btn-primary">Temizle</button>
+</form>
+</div>
   </body>
 </html>
